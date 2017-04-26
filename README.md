@@ -1,6 +1,6 @@
 # npmtest-elasticdump
 
-#### basic test coverage for  elasticdump (v3.1.0)  [![npm package](https://img.shields.io/npm/v/npmtest-elasticdump.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-elasticdump) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-elasticdump.svg)](https://travis-ci.org/npmtest/node-npmtest-elasticdump)
+#### basic test coverage for  [elasticdump (v3.2.0)](https://github.com/taskrabbit/elasticsearch-dump#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-elasticdump.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-elasticdump) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-elasticdump.svg)](https://travis-ci.org/npmtest/node-npmtest-elasticdump)
 
 #### import and export tools for elasticsearch
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-elasticdump/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-elasticdump/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-elasticdump/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-elasticdump/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-elasticdump/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-elasticdump/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-elasticdump/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-elasticdump/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-elasticdump/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-elasticdump/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-elasticdump/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-elasticdump/build/coverage.html/index.html)
 
@@ -35,32 +35,15 @@
 ```json
 
 {
-    "author": "Evan Tahler <evantahler@gmail.com>",
-    "name": "elasticdump",
-    "description": "import and export tools for elasticsearch",
-    "version": "3.1.0",
-    "license": "Apache-2.0",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/taskrabbit/elasticsearch-dump.git"
+    "author": {
+        "name": "Evan Tahler"
     },
-    "main": "elasticdump.js",
-    "keywords": [
-        "elasticsearch",
-        "dump",
-        "elasticdump",
-        "import",
-        "export",
-        "transfer",
-        "migrate",
-        "migartion",
-        "elasitic",
-        "cluster",
-        "elastic-dump",
-        "elastic dump"
-    ],
-    "engines": {
-        "node": ">=4.0.0"
+    "bin": {
+        "elasticdump": "./bin/elasticdump",
+        "multielasticdump": "./bin/multielasticdump"
+    },
+    "bugs": {
+        "url": "https://github.com/taskrabbit/elasticsearch-dump/issues"
     },
     "dependencies": {
         "JSONStream": "^1.2.0",
@@ -71,10 +54,58 @@
         "optimist": "latest",
         "request": "2.x.x"
     },
+    "description": "import and export tools for elasticsearch",
     "devDependencies": {
         "mocha": "latest",
         "should": "latest",
-        "standard": "^8.6.0"
+        "standard": "^10.0.0"
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "e2b430a7ac456512e1a34bdae7ac125c2566a998",
+        "tarball": "https://registry.npmjs.org/elasticdump/-/elasticdump-3.2.0.tgz"
+    },
+    "engines": {
+        "node": ">=4.0.0"
+    },
+    "gitHead": "9064b44c95adaaba4c650f5e906ebe9ebf514bf3",
+    "homepage": "https://github.com/taskrabbit/elasticsearch-dump#readme",
+    "keywords": [
+        "elasticsearch",
+        "dump",
+        "elasticdump",
+        "import",
+        "export",
+        "transfer",
+        "migrate",
+        "migration",
+        "elasitic",
+        "cluster",
+        "elastic-dump",
+        "elastic dump"
+    ],
+    "license": "Apache-2.0",
+    "main": "elasticdump.js",
+    "maintainers": [
+        {
+            "name": "evantahler"
+        },
+        {
+            "name": "bleonard"
+        },
+        {
+            "name": "davidjairala"
+        }
+    ],
+    "name": "elasticdump",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/taskrabbit/elasticsearch-dump.git"
+    },
+    "scripts": {
+        "pretest": "standard",
+        "test": "mocha"
     },
     "standard": {
         "globals": [
@@ -87,13 +118,7 @@
             "afterEach"
         ]
     },
-    "bin": {
-        "elasticdump": "./bin/elasticdump",
-        "multielasticdump": "./bin/multielasticdump"
-    },
-    "scripts": {
-        "test": "standard && mocha"
-    }
+    "version": "3.2.0"
 }
 ```
 
